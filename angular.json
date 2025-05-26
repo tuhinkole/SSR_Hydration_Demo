@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Angular_Ionic": {
+    "app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -63,17 +63,21 @@
               "sourceMap": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Angular_Ionic:build:production"
+              "buildTarget": "app:build:production"
             },
             "development": {
-              "buildTarget": "Angular_Ionic:build:development"
+              "buildTarget": "app:build:development"
             }
+          },
+          "options": {
+            "host": "localhost",
+            "port": 8200
           },
           "defaultConfiguration": "development"
         },
