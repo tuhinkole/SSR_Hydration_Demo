@@ -1,12 +1,15 @@
 <!-- <div><h1>Tuhin Kole</h1></div> -->
 
-<ion-header ngSkipHydration>
+<ion-header>
   <ion-toolbar color="primary">
     <ion-title>Demo of Transfer State</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerAnimation="forward" routerLink="/about">Go to about</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<!-- <ion-content class="ion-padding"> -->
   <ion-accordion-group>
     @for (item of (sectorData$ | async); track $index) {
       <ion-accordion [value]="item.ID">
@@ -25,4 +28,5 @@
       </ion-accordion>
     }
 </ion-accordion-group>
+<!-- </ion-content> -->
 
