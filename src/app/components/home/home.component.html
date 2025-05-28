@@ -2,25 +2,27 @@
 
 <ion-header ngSkipHydration>
   <ion-toolbar color="primary">
-    <h1>Trending Movies</h1>
+    <ion-title>Demo of Transfer State</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-list>
-    @for (item of movies; track $index) {
-      <ion-avatar slot="start">
-        <img [src]="imageBaseUrl + '/w92' + item.poster_path" />
-      </ion-avatar>
-      <ion-label class="ion-text-wrap">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.release_date }}</p>
-      </ion-label>
-      <ion-badge slot="end"> {{ item.vote_average }} </ion-badge>
+  <ion-accordion-group>
+    @for (item of (sectorData$ | async); track $index) {
+      <ion-accordion [value]="item.ID">
+        <ion-item slot="header" color="light">
+          <ion-label>{{item.Name}}</ion-label>
+          <ion-badge color="danger" slot="end">{{item.Mcap | number: '1.1-1'}}</ion-badge>
+        </ion-item>
+        <ion-list slot="content" class="ion-no-padding">
+          @for (val of item.IndustriesForSector; track $index) {
+            <ion-item>
+              <ion-label>{{val.Name}}</ion-label>
+              <ion-badge color="danger" slot="end">{{val.Mcap | number: '1.1-1'}}</ion-badge>
+            </ion-item>
+          }
+        </ion-list>
+      </ion-accordion>
     }
-  </ion-list>
-  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
-    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."> </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
-</ion-content>
+</ion-accordion-group>
 

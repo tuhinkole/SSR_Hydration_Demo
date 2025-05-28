@@ -7,7 +7,7 @@ import { IonicServerModule } from '@ionic/angular-server';
 const serverConfig: ApplicationConfig = {
   providers: [
     provideServerRendering(),
-     IonicServerModule
+    IonicServerModule
   ]
 };
 
