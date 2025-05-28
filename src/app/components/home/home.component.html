@@ -1,4 +1,4 @@
-<div><h1>Tuhin Kole</h1></div>
+<!-- <div><h1>Tuhin Kole</h1></div> -->
 
 <ion-header ngSkipHydration>
   <ion-toolbar color="primary">
@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content ngSkipHydration>
+<ion-content class="ion-padding">
   <ion-list>
     @for (item of movies; track $index) {
       <ion-avatar slot="start">
@@ -19,7 +19,6 @@
       <ion-badge slot="end"> {{ item.vote_average }} </ion-badge>
     }
   </ion-list>
-
   <ion-infinite-scroll (ionInfinite)="loadMore($event)">
     <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."> </ion-infinite-scroll-content>
   </ion-infinite-scroll>
