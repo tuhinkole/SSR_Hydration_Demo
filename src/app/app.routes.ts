@@ -8,7 +8,7 @@ export const routes: Routes = [
         path: 'platform-check',
         loadComponent: () => import("./components/platform-check/platform-check.component").then((m) => m.PlatformCheckComponent)
     }, {
-        path: 'about',
-        loadComponent: () => import("./components/about/about.component").then((m) => m.AboutComponent),
+        path: 'life-cycle-hook',
+        loadComponent: () => import("./components/life-cycle-hook/life-cycle-hook.component").then((m) => m.LifeCycleHookComponent)
     }
 ];
