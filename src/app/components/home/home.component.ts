@@ -1,5 +1,5 @@
 import { Component, inject, makeStateKey, OnInit, StateKey, TransferState } from '@angular/core';
-import { IonHeader, IonToolbar, IonContent, IonList, IonLabel, IonTitle, IonItem, IonBadge, IonAccordion, IonAccordionGroup, IonButton, IonButtons } from "@ionic/angular/standalone";
+import { IonHeader, IonToolbar, IonList, IonLabel, IonTitle, IonItem, IonBadge, IonAccordion, IonAccordionGroup, IonButton, IonButtons } from "@ionic/angular/standalone";
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, of, tap, throwError } from 'rxjs';
 import { AsyncPipe, DecimalPipe } from '@angular/common';
@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [IonButtons, IonButton, IonAccordionGroup, IonAccordion, IonBadge, IonItem, IonTitle, IonLabel, IonList, IonContent, IonToolbar, IonHeader, AsyncPipe, DecimalPipe, RouterLink],
+  imports: [IonButtons, IonButton, IonAccordionGroup, IonAccordion, IonBadge, IonItem, IonTitle, IonLabel, IonList, IonToolbar, IonHeader, AsyncPipe, DecimalPipe, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   host: {ngSkipHydration: 'true'}

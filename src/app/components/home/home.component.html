@@ -8,7 +8,10 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
+<div class="btns">
+  <ion-button routerLink="/life-cycle-hook">Life cycle hook</ion-button>
+  <ion-button routerLink="/platform-check">Platform Chaeck</ion-button>
+</div>
 <!-- <ion-content class="ion-padding"> -->
   <ion-accordion-group>
     @for (item of (sectorData$ | async); track $index) {
