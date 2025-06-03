@@ -14,7 +14,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [IonButtons, IonButton, IonAccordionGroup, IonAccordion, IonBadge, IonItem, IonTitle, IonLabel, IonList, IonContent, IonToolbar, IonHeader, AsyncPipe, DecimalPipe, RouterLink],
+  imports: [IonButtons, IonButton, IonAccordionGroup, IonAccordion, IonBadge, IonItem, IonTitle, IonLabel, IonList, IonToolbar, IonHeader, AsyncPipe, DecimalPipe, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   host: {ngSkipHydration: 'true'}

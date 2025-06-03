@@ -1,1 +1,16 @@
-<p>about works!</p>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>About</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerAnimation="back" routerLink="/home">Go to home</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  <p>
+    This is a demo of Angular's Transfer State feature, which allows you to transfer data from the server to the client side.
+    The data is fetched from a public API and displayed in an accordion format.
+  </p>
+  <p>
+    The data is fetched only once on the server side, and then transferred to the client side, reducing the need for additional HTTP requests.
+  </p>
+  <app-a></app-a>
