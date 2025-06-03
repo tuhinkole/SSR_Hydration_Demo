@@ -1,5 +1,5 @@
 import { Component, inject, makeStateKey, OnInit, StateKey, TransferState } from '@angular/core';
-import { IonHeader, IonToolbar, IonContent, IonList, IonLabel, IonTitle, IonItem, IonBadge, IonAccordion, IonAccordionGroup, IonButton, IonButtons } from "@ionic/angular/standalone";
+import { IonHeader, IonToolbar, IonList, IonLabel, IonTitle, IonItem, IonBadge, IonAccordion, IonAccordionGroup, IonButton, IonButtons } from "@ionic/angular/standalone";
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, of, tap, throwError } from 'rxjs';
 import { AsyncPipe, DecimalPipe } from '@angular/common';
